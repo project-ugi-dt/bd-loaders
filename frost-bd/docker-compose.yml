@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  pg:
+    image: postgis/postgis:17-3.5-alpine
+    container_name: frost-pg
+    environment:
+      POSTGRES_DB: frost
+      POSTGRES_USER: frost
+      POSTGRES_PASSWORD: frost
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d:ro
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
