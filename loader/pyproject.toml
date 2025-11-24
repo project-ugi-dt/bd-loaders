@@ -1,0 +1,11 @@
+[project]
+name = "frost-rudn-loader"
+version = "0.1.0"
+description = "frost-rudn-loader"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "psycopg2-binary",
+    "python-dateutil>=2.9.0.post0",
+]
