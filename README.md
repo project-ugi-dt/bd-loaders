@@ -72,11 +72,11 @@ _________________________________________________________
 Создание PostgreSQL с расширениями PostGIS и PostGIS Raster и загрузка в нее векторных и растровых слоев с БД РУДНа:
 
 **Ключи доступа к БД РУДНа**
-- "<HOST>"
-- "<PORT>"
-- "<dbname>"
-- "<user>"
-- "<password>"
+- HOST
+- PORT
+- DBNAME
+- USER
+- PASSWORD
 
 ```bash
 docker compose up -d
@@ -92,11 +92,11 @@ CREATE EXTENSION IF NOT EXISTS postgres_fdw;
 CREATE SERVER rem FOREIGN DATA WRAPPER postgres_fdw
   OPTIONS (host <HOST>,
            port <PORT>,
-           dbname <dbname>,
+           dbname <DBNAME>,
            sslmode 'require');
 
 CREATE USER MAPPING FOR pguser SERVER rem
-  OPTIONS (user <user>, password <password>);
+  OPTIONS (user <USER>, password <PASSWORD>);
 ```
 Импортируем только те public-таблицы, к которым у нас есть доступ
 
