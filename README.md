@@ -79,12 +79,13 @@ _________________________________________________________
 - USER
 - PASSWORD
 
+🛠Создание БД
 ```bash
 docker compose up -d
 # зайти в контейнер и psql
 docker exec -it pg-postgis-17-35 psql -U pguser -d gis
 ```
-
+📤Загрузка данныХ из БД РУДНа
 ```sql
 -- psql -U pguser -d gis
 DROP SERVER IF EXISTS rem CASCADE;
