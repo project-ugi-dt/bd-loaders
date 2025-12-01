@@ -72,11 +72,11 @@ _________________________________________________________
 Создание PostgreSQL с расширениями PostGIS и PostGIS Raster и загрузка в нее векторных и растровых слоев с БД РУДНа:
 
 **Ключи доступа к БД РУДНа**
-- <HOST>
-- <PORT>
-- <dbname>
-- <user>
-- <password>
+- "<HOST>"
+- "<PORT>"
+- "<dbname>"
+- "<user>"
+- "<password>"
 
 ```bash
 docker compose up -d
